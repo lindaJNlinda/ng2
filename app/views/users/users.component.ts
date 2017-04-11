@@ -1,5 +1,5 @@
 import './users.component.scss';
-import { Component, forwardRef, Inject } from '@angular/core';
+import { Component, forwardRef, Inject,OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AppService } from '../../common/app.service'
 import { AppComponent } from "../../base/app.component";
@@ -11,7 +11,7 @@ import AppConstants from "../../base/app.constants"
     selector: 'app-users',
     templateUrl: './users.component.html'
 })
-export class UsersComponent {
+export class UsersComponent implements OnInit {
 
     private isLoading = false;
     private error = "";

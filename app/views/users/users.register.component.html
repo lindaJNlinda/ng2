@@ -12,19 +12,24 @@
         <div class="col-md-3">Active11</div>
         <div class="col-md-3">Operation111</div>
     </div>
-    <div class="row row-content" *ngFor="let user of users">
-        <div class="col-md-3">
-            12
+    <div class="row row-content" >
+        <div class="col-md-12">
+            <p>ssssssssssss<p>
+            <div style="display: block">
+                <canvas baseChart
+                        [datasets]="barChartData"
+                        [labels]="barChartLabels"
+                        [options]="barChartOptions"
+                        [legend]="barChartLegend"
+                        [chartType]="barChartType"
+                        (chartHover)="chartHovered($event)"
+                        (chartClick)="chartClicked($event)"></canvas>
+            </div>
+            <button (click)="randomize()">Update</button>
         </div>
-        <div class="col-md-3">
-            23
-        </div>
-        <div class="col-md-3">
-            23
-        </div>
-        <div class="col-md-3">
-            23
-        </div>
+        <div class="col-md-12">
 
+            <div id="map" style="height: 300px;"></div>
+        </div>
     </div>
 </div>

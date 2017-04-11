@@ -10,14 +10,17 @@ import { LoginComponent } from "../views/login/login.component";
 import { UsersComponent } from "../views/users/users.component";
 import { LoadingButton } from "../common/app.common.loading-button";
 import {AppErrorComponent} from "../error/app.error.component";
-
+import { ChartsModule } from 'ng2-charts';
 import { UsersRegisterComponent } from '../views/users/users.register.component';
+
+
 @NgModule({
     imports: [
         BrowserModule,
         FormsModule,
         HttpModule,
-        Router
+        Router,
+        ChartsModule
     ],
     declarations: [//declarations：模块内部Components/Directives/Pipes的列表，声明一下这个模块内部成员
         AppComponent,
